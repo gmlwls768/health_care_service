@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>활동관리</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/css/activity.css" />
+    <%- include('include/navbar_top') %>
+  </head>
+  <body>
+    <%- include('include/navbar_left') %>
+
+    <div class="container">
+      <label id="kcal" style="display: none">0</label>
+      <div class="metabolism-box">
+        <h3>대사량 정보</h3>
+        <p>기초대사량: <span id="basalMetabolism"></span></p>
+        <p>
+          활동 대사량: <span id="activityMetabolism">[활동 대사량 값]</span>
+        </p>
+      </div>
+
+      <div class="activity-box">
+        <div class="time-intensity-box">
+          <h3>활동 강도</h3>
+          <p>선택한 활동</p>
+          <div id="selected-activity" class="selected-activity">
+            <span id="selectedActivity"></span>
+          </div>
+        </div>
+
+        <div class="activity-info-box">
+          <h3>활동 정보</h3>
+          <!-- 활동 종류 버튼들 -->
+          <div class="activity-buttons">
+            <button class="btn btn-primary">뒹굴뒹굴</button>
+            <button class="btn btn-primary">좌식업무</button>
+            <button class="btn btn-primary">돌아다니는 업무</button>
+            <button class="btn btn-primary">활동적인 업무</button>
+            <button class="btn btn-primary">일반 직장인</button>
+            <button class="btn btn-primary">휴일 직장인</button>
+          </div>
+
+          <div class="search-section">
+            <h4>검색</h4>
+            <input
+              type="text"
+              class="search-input"
+              placeholder="검색어를 입력하세요"
+              id="search-input-value"
+            />
+            <!-- 검색 입력란 등을 추가 -->
+            <button class="btn btn-primary" onclick="searchForm()">검색</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS 및 Popper.js, jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="/js/activity.js"></script>
+  </body>
+</html>

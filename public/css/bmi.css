@@ -1,0 +1,105 @@
+.container {
+    background-color: #f2f2f2;
+    padding: 40px;
+    margin-bottom: 0px;
+}
+.data-container {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+.grid-white {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.form-control {
+  height: 150px;
+}
+.form-control {
+  font-size: 25px;
+  text-align: center;
+}
+.form-check-label {
+    font-size: 25px; /* 원하는 크기로 설정 */
+}
+.btn-che{
+    margin-top: 20px;
+}
+.bar-graph {
+    width: 500px; /* 그래프 너비 */
+    background-color: #f2f2f2; /* 그래프 배경색 */
+    border-radius: 5px; /* 그래프 모서리를 둥글게 */
+    margin: 20px; /* 그래프 주변 여백 */
+    border: 1px solid black;
+}
+
+/* 막대 스타일 */
+.bar1 {
+    background-color: #2196F3; /* 막대 색상 */
+    height: 30px; /* 막대 높이 */
+    border-radius: 5px; /* 막대 모서리를 둥글게 */
+    margin: 5px; /* 막대 사이 여백 */
+}
+
+.bar2 {
+    background-color: #FF5722;
+    height: 30px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* 텍스트 스타일 */
+.label {
+    font-size: 18px; /* 텍스트 크기 */
+    margin-left: 10px; /* 텍스트 좌측 여백 */
+}
+.larger-text {
+    font-size: 20px; /* 원하는 크기로 설정 */
+}
+.grid-custom {
+    background-color: white;
+    padding: 10px; /* 내부 여백 설정 */
+    border-radius: 5px; /* 모서리 둥글게 설정 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+}
+.my-custom-margin {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: -40px;
+    margin-bottom: -40px;
+    height: 100px;
+}
+.larger-text {
+    font-size: 24px;
+}
+
+.smaller-text {
+    font-size: 16px;
+}
+.grid-content a {
+        color: inherit; /* 링크 색상을 상속받아 원래 색상 유지 */
+        text-decoration: none; /* 링크 밑줄 제거 */
+}
+.grid-content2 {
+        font-size: 20px; /* 폰트 크기 설정 */
+        padding: 20px;
+        border-radius: 5px;
+        font-weight: bold; /* 여백 설정 */
+}
+.grid-content3 {
+        font-size: 15px; /* 폰트 크기 설정 */
+        padding: 10px;
+        border-radius: 5px; /* 여백 설정 */
+}
+.grid-content4 {
+        color: #f2f2f2;
+        padding: 20px; /* 내부 여백 설정 */
+        border-radius: 5px; /* 버튼 모양을 위한 모서리 둥글게 설정 */
+    }
+.grid-content4 a {
+        text-decoration: none; /* 하이퍼링크 텍스트에 밑줄 제거 */
+        color: black; /* 텍스트 색상 설정 */
+        font-weight: bold; /* 텍스트 굵기 설정 */
+    }
+    

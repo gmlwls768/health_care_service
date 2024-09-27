@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/bmi.css" />
+    <!-- public 폴더 안에 styles.css 파일이 있어야 함 -->
+    <%- include('include/navbar_top') %>
+  </head>
+
+  <body>
+    <%- include('include/navbar_left') %>
+    <form>
+      <div class="container">
+        <div class="row">
+          <div class="form-floating">
+            <input id="date" type="text" class="form-control" disabled />
+            <label for="floatingInput">기록일</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="weight">체중</label>
+              <div class="input-group">
+                <input id="weight" class="form-control" type="text" required />
+                <div class="input-group-append">
+                  <span class="input-group-text">kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="fat">체지방률</label>
+              <div class="input-group">
+                <input id="fat" class="form-control" type="text" required />
+                <div class="input-group-append">
+                  <span class="input-group-text">%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="muscle">골격근량</label>
+              <div class="input-group">
+                <input id="muscle" class="form-control" type="text" required />
+                <div class="input-group-append">
+                  <span class="input-group-text">kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 btn-che">
+            <button
+              type="button"
+              class="btn btn-success"
+              onclick="submitData()"
+            >
+              수정
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row grid-custom">
+          <div class="col-md-3 d-flex justify-content-center">
+            <span class="larger-text" style="margin-top: 35px">골격근량</span>
+          </div>
+          <div class="col-md-5">
+            <div class="bar-graph">
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div id="pb-1" class="progress-bar"></div>
+              </div>
+            </div>
+            <div id="pb-1-label" class="label" style="text-align: right">
+              kg
+            </div>
+          </div>
+        </div>
+        <div class="row grid-custom mt-4">
+          <div class="col-md-3 d-flex justify-content-center">
+            <span class="larger-text" style="margin-top: 35px">체지방률</span>
+          </div>
+          <div class="col-md-5">
+            <div class="bar-graph">
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div id="pb-2" class="progress-bar"></div>
+              </div>
+            </div>
+            <div id="pb-2-label" class="label" style="text-align: right">%</div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row bg-white my-custom-margin">
+          <div class="col-md-12">
+            <div class="grid-content">
+              <span class="larger-text">추천 체중 관리</span><br />
+              <div class="grid-content3">
+                <span id="recommend_do_activity" class="smaller-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/bmi.js"></script>
+  </body>
+</html>

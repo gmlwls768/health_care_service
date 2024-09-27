@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>보충제 페이지</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="\css\protein.css" />
+    <%- include('include/navbar_top') %>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu-bar">
+        <div class="menu-item" onclick="showContent('menu1')">초보자</div>
+        <div class="menu-item" onclick="showContent('menu2')">숙련자</div>
+        <div class="menu-item" onclick="showContent('menu3')">기타건강</div>
+      </div>
+
+      <div id="menu1-content" class="content">
+        <h2>초보자 보충제</h2>
+        <div class="test">
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">단백질</p>
+            <br />
+            <p>체중 1kg당 1.6~2g</p>
+            <p>
+              코멘트: 초보자는 2g이 좋다, 흰우유(500ml)를 잘 못먹으면 WPI, 잘
+              먹으면 WPC, 적당히 잘 먹으면 WPI+WPC
+            </p>
+            <p>대상: 단백질을 잘 못챙겨먹는 사람</p>
+            <p>
+              섭취방법: 운동 후 섭취 혹은 단백질이 적은 식사 후, 운동 후 식사가
+              바로 있다면 20g, 운동 후 식사가 바로 없다면 40g 타서 3/4을 바로
+              먹고 1/4은 30분 후 섭취.
+            </p>
+            <div class="slide-button" onclick="toggleSlide('slide1')">
+              추천상품
+            </div>
+            <div id="slide1" class="slide-content"></div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">탄수화물</p>
+            <br />
+            <p>섭취량</p>
+            <p>코멘트 : 식사를 통한 섭취를 더 추천합니다.</p>
+            <div class="slide-button" onclick="toggleSlide('slide2')">
+              추천상품
+            </div>
+            <div id="slide2" class="slide-content"></div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">종합비타민</p>
+            <br />
+            <p>섭취량 : 1/2 ~ 1서빙</p>
+            <P
+              >코멘트 : 식사 부실 시 1서빙, 보통 1/2서빙. 마이프로틴 알파맨은
+              추천 제품은 아닙니다. 비타민류는 아이허브, 쿠팡에서 구매하세요.</P
+            >
+            <div class="slide-button" onclick="toggleSlide('slide3')">
+              추천상품
+            </div>
+            <div id="slide3" class="slide-content">
+              <p>추천 상품</p>
+            </div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">유산균</p>
+            <br />
+            <p>섭취량 : 100억(10 billion)</p>
+            <P>코멘트 : 소화 능력이 약한 사람에게 추천</P>
+            <div class="slide-button" onclick="toggleSlide('slide4')">
+              추천상품
+            </div>
+            <div id="slide4" class="slide-content">
+              <p>추천 상품</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="menu2-content" class="content">
+        <h2>숙련자 보충제</h2>
+        <div class="test">
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">카페인</p>
+            <br />
+            <p>
+              섭취량 : 사람마다 개인차 심함, 부스터의 카페인과 커피, 에너지
+              드링크의 카페인이 다름, 부스터가 더 빠르고 강함, 효과가 강하고
+              좋으나 불면, 피로, 혈압상승, 속쓰림 등 유발될 수 있음
+            </p>
+            <p>
+              코멘트: 초보자는 2g이 좋다, 흰우유(500ml)를 잘 못먹으면 WPI, 잘
+              먹으면 WPC, 적당히 잘 먹으면 WPI+WPC
+            </p>
+            <p>대상 : 지구력(5~105분), 근력운동(짧은시간)</p>
+            <div class="slide-button" onclick="toggleSlide('slide5')">
+              추천상품
+            </div>
+            <div id="slide5" class="slide-content"></div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">
+              크레아틴(웨이트 능력 증가)
+            </p>
+            <br />
+            <p>섭취량 : 꾸준히 섭취 - 5g, 빠르게 로딩 - 20g 7일 동안</p>
+            <p>
+              코멘트 : 지속적 섭취를 통해 체내 보유량 증가 목표, 근육량이 좀
+              있어야 효과
+            </p>
+            <p>대상 : 150초 이하 운동, 30초 이하 운동이 가장 효과적</p>
+            <div class="slide-button" onclick="toggleSlide('slide6')">
+              추천상품
+            </div>
+            <div id="slide6" class="slide-content"></div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">
+              베타알라닌(웨이트 능력 증가)
+            </p>
+            <br />
+            <p>섭취량 : 65mg/kg, 따끔거림이 싫다면, 1g씩 나눠서 섭취</p>
+            <P>코멘트 : 지속적 섭취를 통해 체내 보유량 증가 목표</P>
+            <P>대상 : 젖산이 생성되는 운동(30초~10분) 매우 짧은 운동</P>
+            <div class="slide-button" onclick="toggleSlide('slide7')">
+              추천상품
+            </div>
+            <div id="slide7" class="slide-content">
+              <p>추천상품</p>
+            </div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">
+              Nitrate(중강도 운동능력 증가)
+            </p>
+            <br />
+            <p>섭취량 : 310~560mg, 무, 비트 300g</p>
+            <P>코멘트 : 섭취가 까다로움, 보충제도 존재하나, 식품 섭취 권장</P>
+            <P>대상 : 12분 미만은 애매, 12분 이상 40분 이하 효과</P>
+            <div class="slide-button" onclick="toggleSlide('slide8')">
+              추천상품
+            </div>
+            <div id="slide8" class="slide-content">
+              <p>추천 상품</p>
+            </div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">
+              Sodium Bicarbonate(웨이트 능력 증가)
+            </p>
+            <br />
+            <p>섭취량 : 0.2~0.4g/kg</p>
+            <P
+              >코멘트 : 마트에 500원으로 살 수 있는 성분, A급 성분으로
+              유명하지만, 왜 보충제로 안나오는지 먹어보면 알 수 있다. 속쓰림
+              주의, 노익스에 가스 소리 원인</P
+            >
+            <P>대상 : 60초 ~ 10분, 길어질수록 효과 반감</P>
+            <div class="slide-button" onclick="toggleSlide('slide9')">
+              추천상품
+            </div>
+            <div id="slide9" class="slide-content">
+              <p>추천 상품</p>
+            </div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">
+              스포츠 드링크(에너지, 수분공급)
+            </p>
+            <br />
+            <p>섭취량 : 게토레이, 포카리스웨트, 30분당 500ml(초과섭취x)</p>
+            <P
+              >코멘트 : 수분과 탄수화물(에너지)의 빠른 공급, 운동중에 공급이
+              가능하다는 장점, 운동 강도, 소화 능력에 따라 섭취량과 농도 조절
+              필수</P
+            >
+            <P
+              >대상 : 운동시간이 매우 긴 경우, 장시간 공복 후 운동할 경우
+              추천</P
+            >
+            <div class="slide-button" onclick="toggleSlide('slide10')">
+              추천상품
+            </div>
+            <div id="slide10" class="slide-content">
+              <p>추천 상품</p>
+            </div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">BCAA</p>
+            <br />
+            <p>섭취량 : 10~15g</p>
+            <P
+              >코멘트 : 유청단백질의 20%는 BCAA, 섭취량만큼 BCAA섭취 줄일 것,
+              BCAA 단맛은 100% 첨가물, 첨가물 다량섭취 주의</P
+            >
+            <P>대상 : 운동 시 맹물 싫은 사람</P>
+            <div class="slide-button" onclick="toggleSlide('slide11')">
+              추천상품
+            </div>
+            <div id="slide11" class="slide-content">
+              <p>추천 상품</p>
+            </div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">
+              시트룰린, 아르기닌(펌핑, 혈관확장)
+            </p>
+            <br />
+            <p>섭취량 : 시트룰린 6~8g, 아르기닌 3~9g</p>
+            <P
+              >코멘트 : 아르기닌이 NO산화질소, 펌핑 혈관확장, Erection에 도움이
+              됨. 하지만 공복에 섭취해야 하고 한번에 먹을 경우 부담이 될 수
+              있음. 혈중 감소가 빠름, 시트룰린은 이 부분이 보완됨. 혈중 농도
+              유지가 좋고 섭취가 용이함.</P
+            >
+            <P
+              >대상 : 운동수행 능력 도움에는 호불호가 갈림. 실제로 펌핑에는
+              도움이 되는지도 여러가지 의견이 갈림. 혈관확장을 원한다면 섭취</P
+            >
+            <div class="slide-button" onclick="toggleSlide('slide12')">
+              추천상품
+            </div>
+            <div id="slide12" class="slide-content">
+              <p>추천 상품</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="menu3-content" class="content">
+        <h2>기타건강</h2>
+        <div class="test">
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">비타민D</p>
+            <br />
+            <p>섭취량 : 2000~5000IU</p>
+            <p>
+              코멘트 : 햇빛을 본볼 경우 섭취량 200~4000IU, 5000IU 이상 섭취 시
+              중간에 혈중 비타민 D 검사할 것
+            </p>
+            <p>대상 : 햇빛 안보는 사람 추천, K2는 칼슘침착 우려시 섭취</p>
+            <div class="slide-button" onclick="toggleSlide('slide13')">
+              추천상품
+            </div>
+            <div id="slide13" class="slide-content"></div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">칼슘</p>
+            <br />
+            <p>섭취량 : 700~1000mg</p>
+            <p>
+              코멘트 : 칼슘강화우유, 카제인, 밀크프로틴 안먹으면 추천, 많이 섭취
+              시 마그네슘 아연 흡수 저해 가능,(e.g. 밀크프로틴+ZMA안됨) 칼슘
+              침착이 걱정되면 Vit K 섭취
+            </p>
+            <p>
+              대상 : 체중이 많이 나갈경우 칼슘 섭취량 늘릴 것, 체중당 11.2mg/kg
+            </p>
+            <div class="slide-button" onclick="toggleSlide('slide14')">
+              추천상품
+            </div>
+            <div id="slide14" class="slide-content"></div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">오메가3</p>
+            <br />
+            <p>
+              섭취량 : 250mg - 필수지방산 섭취, 2~4g - 심혈관계 예방, 약간의
+              근육회복증가와 데미지 감소
+            </p>
+            <P
+              >코멘트 : EPA+DHA 합친 양, 단순, 필수지방선 섭취가 목적이라면
+              크릴오일, 식물성 오메가3 섭취도 가능, 일반적으로 알려진 오메가3
+              효과를 보려면 고르지 말것.</P
+            >
+            <P
+              >대상 : 일반적으로 섭취하면 좋음, 특히 중성지방 수치가 높은 사람
+              추천</P
+            >
+            <div class="slide-button" onclick="toggleSlide('slide15')">
+              추천상품
+            </div>
+            <div id="slide15" class="slide-content">
+              <p>추천 상품</p>
+            </div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">아연</p>
+            <br />
+            <p>섭취량 : 10~50mg</p>
+            <P
+              >코멘트 : 칼슘, 아연, 마그네슘은 서로 경쟁 흡수함, 섭취량이 많을
+              경우 나눠서 섭취, 섭취시 속 불편할 가능성, 그 경우 식후에 섭취</P
+            >
+            <P
+              >대상 : 땀 많이 흘리고 편식이 심한 경우, 아연은 2차 성장기때
+              필수</P
+            >
+            <div class="slide-button" onclick="toggleSlide('slide16')">
+              추천상품
+            </div>
+            <div id="slide16" class="slide-content">
+              <p>추천 상품</p>
+            </div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">마그네슘</p>
+            <br />
+            <p>섭취량 : 300mg</p>
+            <P
+              >코멘트 : 칼슘, 아연, 마그네슘은 서로 경쟁흡수함, 섭취량이 많을
+              경우 나눠서 섭취, 섭취시 속 불편할 가능성, 그 경우 식후에 섭취</P
+            >
+            <P>대상 : 땀 많이 흘리고 편식이 심한 경우</P>
+            <div class="slide-button" onclick="toggleSlide('slide17')">
+              추천상품
+            </div>
+            <div id="slide17" class="slide-content">
+              <p>추천 상품</p>
+            </div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">밀크씨슬(간 회복)</p>
+            <br />
+            <p>섭취량 : 장기 섭취시 200mg 이하로, 단기 섭취시 200~400mg</p>
+            <P>코멘트 : 술 마시는 날 당일 아침에 복용하는게 좋음</P>
+            <P
+              >대상 : 술을 마시는 횟수가 기하급수적이여서 간이 손상된 것 같다고
+              판단되는 분들</P
+            >
+            <div class="slide-button" onclick="toggleSlide('slide18')">
+              추천상품
+            </div>
+            <div id="slide18" class="slide-content">
+              <p>추천 상품</p>
+            </div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">홍경천(피로회복)</p>
+            <br />
+            <p>섭취량 : 500mg, 운동전(부스터와 함께) 혹은 공복에 섭취</p>
+            <P
+              >코멘트 : 육체 피로에 도움이 될 수 있음. 단, 피로회복은 수면과
+              영양섭취가 가장 1순위, 보충제는 약간의 도움임.</P
+            >
+            <div class="slide-button" onclick="toggleSlide('slide19')">
+              추천상품
+            </div>
+            <div id="slide19" class="slide-content">
+              <p>추천 상품</p>
+            </div>
+          </div>
+
+          <div class="row2">
+            <p style="font-size: 18px; font-weight: bold">테아닌(피로회복)</p>
+            <br />
+            <p>섭취량 : 200mg, 취침 30분전 섭취, 부스터와 함께 섭취 가능</p>
+            <P
+              >코멘트 : 정신적 스트레스, 높은 흥분,긴장을 완화시켜주는 제품이다.
+              특이하게도 정신적 스트레스에도 도움이 되지만, 부스터(카페인)과
+              같이도 사용된다. 부스터의 과도한 흥분을 억제함으로써 집중력을
+              올리는 조합으로 사용된다. 진정효과가 있지만 수면유도가 아니기
+              때문에 부담없이 사용가능하다. 단, 작용이 사람마다 편차가 있으며
+              작용강도가 높지 않다는점 유의해야한다.</P
+            >
+            <P
+              >대상 : 정신적 스트레스를 많이 받는경우, 카페인에 심하게 민감한
+              경우</P
+            >
+            <div class="slide-button" onclick="toggleSlide('slide20')">
+              추천상품
+            </div>
+            <div id="slide20" class="slide-content">
+              <p>추천 상품</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/supplement.js"></script>
+  </body>
+</html>

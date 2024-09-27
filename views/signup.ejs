@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- public 폴더 안에 styles.css 파일이 있어야 함 -->
+    <%- include('include/navbar_top') %>
+  </head>
+
+  <body>
+    <main>
+      <form id="signupForm">
+        <label for="signupUsername">아이디:</label>
+        <input type="text" id="signupUsername" name="signupUsername" required />
+        <br />
+        <label for="signupPassword">비밀번호:</label>
+        <input
+          type="password"
+          id="signupPassword"
+          name="signupPassword"
+          required
+        />
+        <br />
+        <label for="checkedPassword">비밀번호 확인:</label>
+        <input
+          type="password"
+          id="checkedPassword"
+          name="checkedPassword"
+          required
+        />
+        <br />
+        <label for="fullName">이름:</label>
+        <input type="text" id="fullName" name="fullName" required />
+        <br />
+        <label for="email">이메일:</label>
+        <input type="email" id="email" name="email" required />
+        <br />
+        <label for="age">나이:</label>
+        <input type="number" id="age" name="age" required />
+        <br />
+        <br />
+        <label for="gender">성별:</label>
+        <input type="text" id="gender" name="gender" required />
+        <br />
+        <button type="button" onclick="signup()">회원가입</button>
+      </form>
+    </main>
+
+    <script>
+      async function signup() {
+        const signupUsername = document.getElementById("signupUsername").value;
+        const signupPassword = document.getElementById("signupPassword").value;
+        const checkedPassword =
+          document.getElementById("checkedPassword").value;
+        const fullName = document.getElementById("fullName").value;
+        const email = document.getElementById("email").value;
+        const age = document.getElementById("age").value;
+        const gender = document.getElementById("gender").value;
+
+        // 비밀번호 확인
+        if (signupPassword !== checkedPassword) {
+          alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
+          return;
+        }
+
+        try {
+          const response = await fetch(
+            "http://localhost:8080/api/auth/signup",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                id: signupUsername,
+                password: signupPassword,
+                checkedPassword,
+                username: fullName,
+                email,
+                age,
+                gender,
+              }),
+            }
+          );
+
+          if (!response.ok) {
+            const errorData = await response.json();
+            return alert(errorData.message || "회원가입에 실패했습니다.");
+          }
+
+          alert("회원가입이 완료되었습니다.");
+          window.location.href = "/login"; // 메인 페이지 URL로 변경
+        } catch (error) {
+          alert(error.message);
+        }
+      }
+    </script>
+  </body>
+</html>

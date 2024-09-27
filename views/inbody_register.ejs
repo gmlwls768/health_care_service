@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Health Data</title>
+    <link rel="stylesheet" href="css/inbody_register.css" />
+    <%- include('include/navbar_top') %>
+  </head>
+
+  <body>
+    <div class="content">
+      <h2>신체 정보 입력</h2>
+      <form id="healthDataForm">
+        <div>
+          <label for="height">키</label>
+          <input type="text" id="height" name="height" required />
+        </div>
+
+        <div>
+          <label for="weight">몸무게</label>
+          <input type="text" id="weight" name="weight" required />
+        </div>
+
+        <div>
+          <label for="bmi">BMI</label>
+          <input type="text" id="bmi" name="bmi" disabled value="" />
+        </div>
+
+        <div>
+          <label for="body_fat">체지방률</label>
+          <input
+            type="text"
+            id="body_fat"
+            name="body_fat"
+            onfocus="bmi_calc()"
+          />
+        </div>
+
+        <div>
+          <label for="protein_per_weight">골격근량</label>
+          <input
+            type="text"
+            id="protein_per_weight"
+            name="protein_per_weight"
+          />
+        </div>
+
+        <button type="button" onclick="submitData()">입력완료</button>
+      </form>
+    </div>
+
+    <script>
+      function bmi_calc() {
+        const height = document.getElementById("height").value / 100;
+        const weight = document.getElementById("weight").value;
+        const bmi = (weight / height ** 2).toFixed(2);
+
+        document.getElementById("bmi").value = bmi;
+      }
+    </script>
+    <script src="/js/inbody_register.js"></script>
+  </body>
+</html>

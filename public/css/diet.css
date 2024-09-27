@@ -1,0 +1,136 @@
+body {
+    background-color: #e9e9e9;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.row2{
+    display: flex;
+    background-color: #fff;
+    margin: 10px;
+    justify-content: space-around;
+}
+
+.row2 > *{
+    width: 33%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row2 .title {
+    color: rgb(56, 56, 56);
+}
+
+.row2 input{
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid rgb(58, 58, 58);
+    font-size: 50px;
+    text-align: center;
+}
+
+.row2 .unit {
+    text-align: end;
+    color: rgb(56, 56, 56);
+    font-weight: 700;
+}
+.row3 {
+    display: flex;
+    background-color: #fff;
+    margin: 10px;
+    justify-content: space-around; 
+}
+.row3 > *{
+    width: 49%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.row3 input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 50px;
+    text-align: center;
+}
+.row3 .unit {
+    text-align: end;
+    color: rgb(56, 56, 56);
+
+}
+.row4 {
+    display: flex;
+    background-color: #fff;
+    margin: 10px;
+    justify-content: space-around; 
+}
+.row4 > *{
+    width: 24%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.row4 input{
+    width: 100%;
+    padding: 30px;
+    border: none;
+    font-size: 45px;
+    text-align: center;
+    font-weight: 700;
+}
+.row4 .unit {
+    text-align: end;
+    color: rgb(56, 56, 56);
+}
+.row4 .a1 {
+    background-color: rgb(251, 222, 68, 0.667);
+    text-align: end;
+    color: rgb(26, 26, 26);
+    border: 5px solid #cec328;
+    border-radius: 10px;
+}
+.date .text {
+    width: 98.5%;
+    background-color: #fff;
+    padding: 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+.textbox1 {
+    width: 98.5%;
+    background-color: #fff;
+    padding: 15px;
+    margin-left: 10px;
+    border: 5px solid #868686;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.date1 {
+    width: 98.5%;
+    background-color: #fff;
+    display: flex;
+    padding: 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+.button-container {
+    display: flex;
+    flex-direction: column; /* 요소들을 세로(column)로 배치 */  
+}
+.button-container button {
+    background-color: #e4e72f; /* 원하는 색상 코드 */
+    color: black; /* 버튼 텍스트 색상 */
+    padding: 8px 16px; /* 버튼 여백 설정 */
+    border: none; /* 테두리 없애기 */
+    border-radius: 4px; /* 버튼 모서리 둥글게 만들기 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    text-decoration: none; /* 링크 스타일 제거 */
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* hover 효과를 위한 전환 설정 */
+}

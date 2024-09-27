@@ -1,0 +1,67 @@
+body {
+    background-color: #b6b0b0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    background-color: white;
+}
+
+.menu-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-item {
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+
+.row2 {
+    border: 1px solid #ddd;
+    margin: 15px ;
+    padding: 10px;
+    width: 45%;
+}
+.button-content {
+    display: flex;
+    justify-content: space-between; /* 버튼과 텍스트를 간격을 두고 배치 */
+}
+
+.slide-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.slide-button {
+    cursor: pointer;
+    color: #3366cc;
+    text-decoration: underline;
+    text-align: end;
+}
+.test {
+    display: flex;
+    flex-wrap: wrap;
+}
+.hot_item {
+    font-size: 15px;
+    font-weight: 500;
+}

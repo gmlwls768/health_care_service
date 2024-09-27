@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  img {
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 155);
+    writing-mode: horizontal-tb;
+    white-space: nowrap; /* 텍스트가 한 줄로 줄 바꿈되지 않도록 합니다 */
+    max-width: 90%; /* 최대 너비를 조정하여 텍스트가 너무 길어지지 않도록 합니다 */
+    text-align: center;
+  }
+  .text-overlay p {
+    font-weight: bold;
+  }

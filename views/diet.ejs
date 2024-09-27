@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>다이어트</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <%- include('include/navbar_top') %>
+
+    <link rel="stylesheet" href="css/diet.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row3">
+        <div class="weight">
+          <div class="title">체중</div>
+          <input type="number" disabled id="weight" />
+          <div class="unit">kg</div>
+        </div>
+        <div class="body_fat">
+          <div>
+            <div class="title">체지방률</div>
+            <input type="number" disabled id="fat" />
+            <div class="unit">%</div>
+          </div>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="want_fat_wrapper">
+          <div class="title">목표 체지방률</div>
+          <input type="number" id="desired_fat" />
+          <div class="unit">%</div>
+        </div>
+        <div class="start_kcal_wrapper">
+          <div class="title">시작시 줄일 칼로리</div>
+          <input type="number" id="start_kcal" />
+          <div class="unit">kcal</div>
+        </div>
+        <div class="goal_kcal_wrapper">
+          <div class="title">
+            하루 목표 줄일 칼로리(활동대사량 - 섭취칼로리)
+          </div>
+          <input type="number" id="every_kcal" />
+          <div class="unit">kcal</div>
+        </div>
+      </div>
+      <div class="row4">
+        <div class="want_bodyfat_wrapper">
+          <div class="title">목표 체중</div>
+          <input type="text" id="desired_kg" />
+          <div class="unit">kg</div>
+        </div>
+        <div class="Minus_weight">
+          <div class="title">빼야 할 체중</div>
+          <input type="text" id="lost_required_kg" disabled />
+          <div class="unit">kg</div>
+        </div>
+        <div>
+          <div class="title">다이어트 기간</div>
+          <input type="number" class="a1" id="diet_date" disabled />
+          <div class="unit">일</div>
+        </div>
+        <div class="button-container">
+          <button onclick="submitData()">등록</button>
+        </div>
+      </div>
+
+      <div class="textbox1">
+        <p>추정치입니다.</p>
+        <p>
+          체지방률이 높은 경우 (활동대사량) - (먹는양) 크기를 늘리셔도 됩니다.
+        </p>
+        <p>
+          (활동대사량) - (먹는양)이 크면, 다이어트가 빠르지만 근손실 위험이
+          있습니다.
+        </p>
+        <p>
+          (활동대사량) - (먹는양)의 이상적인 숫자는 500Kcal, 많게는 700Kcal가 될
+          수 있습니다.
+        </p>
+        <p>그 이상 늘릴경우 근손실의 우려가 있습니다.</p>
+        <p>근손실은 나이, 호르몬, 근력운동, 활동량, 식단과 관련이 있습니다.</p>
+        <p>
+          다이어트를 오래해서 컨디션이 안좋아질 경우에는 1달 '유지기간'을 가지고
+          다이어트에 다시 돌입하면 좋습니다.
+        </p>
+        <p>
+          다이어트 종료후 글리코겐이 재충전 되면서 1kg에서 많게는 2~3kg체중이
+          증가 될 수 있습니다.
+        </p>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/diet.js"></script>
+  </body>
+</html>

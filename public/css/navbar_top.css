@@ -1,0 +1,36 @@
+.navbar-nav .nav-link {
+  margin-right: 10px; /* 링크 간 우측 마진 설정 */
+  margin-left: 10px; /* 링크 간 좌측 마진 설정 */
+  color: white;
+}
+
+.navbar-vertical {
+  height: 100vh; /* 높이를 화면 전체로 설정 */
+  width: 100px; /* 너비를 원하는 크기로 설정 */
+  background-color: grey; /* 배경색을 그레이로 설정 */
+  position: fixed; /* 화면에 고정 */
+  top: 0; /* 화면 상단에 위치 */
+  left: 0; /* 화면 왼쪽에 위치 */
+  padding-top: 56px; /* 상단 네비게이션의 높이만큼 여백 추가 */
+  z-index: 1; /* 네비게이션 바의 순서 지정 */
+  text-align: center;
+  margin-top: 10px; /* 링크 간 우측 마진 설정 */;
+}
+
+.navbar1-nav .nav-link {
+  margin-bottom: 30px; /* 링크 사이에 간격 추가 */
+  width: 100%; /* 너비를 100%로 설정하여 좌측 정렬 */
+  color: white;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* 다른 요소보다 앞에 표시 */
+}
+
+body {
+  padding-top: 56px; /* 네비게이션 바의 높이에 맞게 조절 */
+}

@@ -1,0 +1,28 @@
+<!-- views/login.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- public 폴더 안에 styles.css 파일이 있어야 함 -->
+    <%- include('include/navbar_top') %>
+  </head>
+
+  <body>
+    <main>
+      <form id="loginForm">
+        <label for="username">사용자명:</label>
+        <input type="text" id="username" name="username" required />
+        <br />
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password" required />
+        <br />
+        <button type="button" onclick="login()">로그인</button>
+      </form>
+    </main>
+    <script src="/js/login.js"></script>
+  </body>
+</html>
