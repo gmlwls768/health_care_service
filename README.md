@@ -20,7 +20,7 @@
 
 
 ## Demo
-[![Video Label](https://img.youtube.com/HK4R0KriCIs/0.jpg)](https://youtu.be/HK4R0KriCIs)
+[![Video Label]([image](https://github.com/user-attachments/assets/0c0b049f-7548-40ae-b5de-f429712e7335))](https://youtu.be/HK4R0KriCIs)
 
 ## Installation
 1. Clone the repository:
