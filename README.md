@@ -27,6 +27,11 @@
     ```bash
     git clone https://github.com/gmlwls768/health_care_service.git
     ```
+2. Clone the repository:
+    ```bash
+    run     ./Initial_settings/Initial_settings.py
+    ```
+
 2. Install the necessary dependencies:
     ```bash
     npm install
